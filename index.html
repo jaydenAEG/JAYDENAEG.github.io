@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>马来西亚股票市场专家见解</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <style>
+        :root {
+            --dark-blue: #003366;
+            --light-blue: #0099cc;
+            --white: #ffffff;
+            --green: #33cc33;
+            --gray: #f2f2f2;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark-blue);
+        }
+        header {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 1rem;
+        }
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+        }
+        .hero {
+            background-image: url('LOGO.PNG');
+            background-size: cover;
+            background-position: center;
+            height: 550px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            background-attachment: fixed;
+            
+        }
+        
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 51, 102, 0.7); /* Dark overlay */
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            z-index: 1;
+        }
+
+        .cta-button {
+            background-color: var(--green);
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            z-index: 1;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--light-blue);
+        }
+
+        .services, .market-analysis, .milestone, .basic-vs-vip, .premium-services, .contact {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .service-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .service-card {
+            background-color: var(--light-blue);
+            color: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            width: 30%;
+            margin: 1rem 0;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+
+        .milestone-images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .milestone-images img {
+            width: 22%;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+
+        .milestone-images img:hover {
+            transform: scale(1.05);
+        }
+
+        .premium-services-images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .premium-services img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+
+        .milestone-images img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--green);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+
+        .whatsapp-button:hover {
+            background-color: var(--light-blue);
+        }
+
+        .whatsapp-button i {
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            .service-card {
+                width: 90%;
+            }
+            .milestone-images img {
+                width: 45%;
+            }
+        }
+
+        /* Table styling */
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background-color: var(--gray);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid var(--dark-blue);
+        }
+
+        th {
+            background-color: var(--light-blue);
+            color: var(--white);
+        }
+
+        tr:hover {
+            background-color: var(--light-blue);
+            color: var(--white);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"> </div>
+        <nav>
+            <ul>
+                <li><a href="#home">主页</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#services">服务</a></li>
+                <li><a href="#market-analysis">市场分析</a></li>
+                <li><a href="#blog">博客</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>马来西亚股票市场专家见解</h1>
+            <p>来自您的股票经纪的可信赖建议</p>
+            <a href="https://wa.me/60102672767" class="cta-button">了解更多</a>
+        </section>
+
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>Shares Analysis</h3>
+                    <p>分享值得留意的市场消息</p>
+                    <p>提倡波段交易</p>
+                </div>
+                <div class="service-card">
+                    <h3>Portfolio Review</h3>
+                    <p>1:1 诊股</p>
+                    <p>淘弱留强</p>
+                </div>
+                <div class="service-card">
+                    <h3>Market Updates</h3>
+                    <p>每晚市场与内部个股更新</p>
+                    <p>每周以图表分析，供会员参考</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="market-analysis" class="market-analysis">
+            <h2>Latest Market Insight</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/O9PHIyVCjho" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </section>
+
+        <section id="premium-services" class="premium-services">
+            <h2>PREMIUM</h2>
+            <img src="SERVICES.png" alt="高级服务" />
+        </section>
+
+        <section class="milestone">
+            <h2>2024 Milestone</h2>
+            <div class="milestone-images">
+                <img src="MAY.PNG" alt="里程碑 1">
+                <img src="JUN.PNG" alt="里程碑 2">
+                <img src="JULY.PNG" alt="里程碑 3">
+                <img src="AUG.JPG" alt="里程碑 4">
+            </div>
+        </section>
+
+        <!-- New section: Basic vs VIP -->
+        <section id="basic-vs-vip" class="basic-vs-vip">
+            <h2>INTERNAL vs VIP GROUP</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>服务内容</th>
+                        <th>INTERNAL</th>
+                        <th>VIP Service </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1:1 诊股</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <td>每晚市场与内部个股更新</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <td>内部个股追踪</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <td>股票推荐与分析</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <td>每周以图表分析</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <td>内部聊天群组</td>
+                        <td></td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <td>市场解说(VIDEO)</td>
+                        <td></td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <td>技术分析分享(VIDEO)</td>
+                        <td></td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <td>短期交易机会</td>
+                        <td></td>
+                        <td>✔</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>CONTACT US</h2>
+            <p>Click for CDS Account Opening</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwpnuevpLyM26Uh92_Hy-pJIMcxxcWKFmjRxiK8v7VAVs5oQ/viewform?usp=sf_link" class="cta-button" class="cta-button">CDS ACC OPENING </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jayden Service. All rights reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/60102672767" class="whatsapp-button">
+        <i class="fab fa-whatsapp"></i> WHATSAPP JAYDEN
+    </a>
+</body>
+</html>
