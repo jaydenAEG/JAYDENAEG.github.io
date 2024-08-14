@@ -230,6 +230,24 @@
             background-color: var(--light-blue);
             color: var(--white);
         }
+
+        /* Responsive YouTube Video */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
     </style>
 </head>
 <body>
@@ -277,7 +295,9 @@
 
         <section id="market-analysis" class="market-analysis">
             <h2>Latest Market Insight</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/O9PHIyVCjho" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/O9PHIyVCjho" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
         </section>
 
         <section id="premium-services" class="premium-services">
@@ -288,18 +308,19 @@
         <section class="milestone">
             <h2>2024 Milestone</h2>
             <div class="milestone-images">
-                <img src="MAY.PNG" alt="里程碑 1">
-                <img src="JUNE.PNG" alt="里程碑 2">
-                <img src="JULY.PNG" alt="里程碑 3">
+                <img src="milestone1.png" alt="Milestone 1">
+                <img src="milestone2.png" alt="Milestone 2">
+                <img src="milestone3.png" alt="Milestone 3">
+                <img src="milestone4.png" alt="Milestone 4">
             </div>
         </section>
 
         <section id="basic-vs-vip" class="basic-vs-vip">
-            <h2>Basic vs VIP</h2>
+            <h2>Basic VS VIP 服务对比</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Features</th>
+                        <th>服务</th>
                         <th>Basic</th>
                         <th>VIP</th>
                     </tr>
@@ -311,22 +332,42 @@
                         <td>✔️</td>
                     </tr>
                     <tr>
-                        <td>市场与内部个股更新</td>
+                        <td>每晚市场更新</td>
                         <td>✔️</td>
                         <td>✔️</td>
                     </tr>
                     <tr>
-                        <td>内部聊天群组</td>
+                        <td>内部个股追踪</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>推荐与分析</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>每周以图表分析</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>内部聊天群</td>
                         <td>❌</td>
                         <td>✔️</td>
                     </tr>
                     <tr>
-                        <td>每周图表分析</td>
-                        <td>✔️</td>
+                        <td>视频市场讲解</td>
+                        <td>❌</td>
                         <td>✔️</td>
                     </tr>
                     <tr>
-                        <td>短期交易机会</td>
+                        <td>视频技术分享</td>
+                        <td>❌</td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>短线交易机会</td>
                         <td>❌</td>
                         <td>✔️</td>
                     </tr>
@@ -335,19 +376,18 @@
         </section>
 
         <section id="contact" class="contact">
-            <h2>Contact Us</h2>
-            <p>如果您有任何问题或需要更多信息，请随时与我们联系。</p>
-            <a href="https://wa.me/60102672767" class="cta-button">联系我们</a>
+            <h2>联系我们</h2>
+            <p>如果您对我们的服务有任何疑问，请随时联系我们。</p>
+            <a href="https://wa.me/60102672767" class="cta-button">联系</a>
         </section>
     </main>
 
     <footer>
-        <p>版权所有 © 2024 AEG 投资咨询有限公司</p>
+        <p>&copy; 2024 AEG. All rights reserved.</p>
     </footer>
 
     <a href="https://wa.me/60102672767" class="whatsapp-button">
-        <i class="fab fa-whatsapp"></i>
-        Chat with us
+        <i class="fab fa-whatsapp"></i> Contact Us
     </a>
 </body>
 </html>
