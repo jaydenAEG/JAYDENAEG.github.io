@@ -41,7 +41,8 @@
         }
         .hero {
             background-image: url('LOGO.PNG');
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
             background-position: center;
             height: 550px;
             display: flex;
@@ -51,7 +52,6 @@
             text-align: center;
             color: var(--white);
             position: relative;
-            background-attachment: fixed;
         }
         
         .hero::before {
@@ -185,6 +185,9 @@
         }
 
         @media (max-width: 768px) {
+            .hero {
+                background-size: 80%; /* Reduce background size for mobile */
+            }
             .hero h1 {
                 font-size: 2rem;
             }
@@ -308,84 +311,84 @@
             <div class="milestone-images">
                 <img src="MAY.PNG" alt="Milestone 1">
                 <img src="JUN.PNG" alt="Milestone 2">
-                <img src="MAY.PNG" alt="Milestone 3">
-                <img src="AUG.JPG" alt="Milestone 4">
+                <img src="JULY.PNG" alt="Milestone 3">
+                <img src="AUG.JPG" alt="Milestone 3">
             </div>
         </section>
 
         <section id="basic-vs-vip" class="basic-vs-vip">
-            <h2>Basic VS VIP 服务对比</h2>
+            <h2>Basic vs VIP</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>服务</th>
+                        <th>Services</th>
                         <th>Basic</th>
                         <th>VIP</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1:1 诊股</td>
-                        <td>✔️</td>
-                        <td>✔️</td>
+                        <td>1:1 股票咨询</td>
+                        <td>✔</td>
+                        <td>✔</td>
                     </tr>
                     <tr>
                         <td>每晚市场更新</td>
-                        <td>✔️</td>
-                        <td>✔️</td>
+                        <td>✔</td>
+                        <td>✔</td>
                     </tr>
                     <tr>
-                        <td>内部个股追踪</td>
-                        <td>✔️</td>
-                        <td>✔️</td>
+                        <td>内部股票追踪</td>
+                        <td>✔</td>
+                        <td>✔</td>
                     </tr>
                     <tr>
-                        <td>推荐与分析</td>
-                        <td>✔️</td>
-                        <td>✔️</td>
+                        <td>股票推荐与分析</td>
+                        <td>✔</td>
+                        <td>✔</td>
                     </tr>
                     <tr>
-                        <td>每周以图表分析</td>
-                        <td>✔️</td>
-                        <td>✔️</td>
+                        <td>每周市场解析与图表</td>
+                        <td>✔</td>
+                        <td>✔</td>
                     </tr>
                     <tr>
-                        <td>VIP群组</td>
+                        <td>VIP GROUP CHAT</td>
                         <td>❌</td>
-                        <td>✔️</td>
+                        <td>✔</td>
                     </tr>
                     <tr>
-                        <td>市场讲解（VIDEO）</td>
+                        <td>市场解析（VIDEO）</td>
                         <td>❌</td>
-                        <td>✔️</td>
+                        <td>✔</td>
                     </tr>
                     <tr>
-                        <td>技术分享（VIDEO）</td>
+                        <td>技术分析分享（VIDEO）</td>
                         <td>❌</td>
-                        <td>✔️</td>
+                        <td>✔</td>
                     </tr>
                     <tr>
-                        <td>短线交易机会</td>
+                        <td>更多短期交易机会</td>
                         <td>❌</td>
-                        <td>✔️</td>
+                        <td>✔</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
         <section id="contact" class="contact">
-            <h2>联系我们</h2>
-            <p>对我们的服务有任何疑问，随时联系我们。</p>
-            <a href="https://wa.me/60102672767" class="cta-button">联系</a>
+            <h2>Contact Us</h2>
+            <p>如有任何问题或需进一步了解服务，欢迎通过以下方式联系我们：</p>
+            <p>Phone: +60 1026 72767</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 AEG. All rights reserved.</p>
+        <p>&copy; 2024 AEG JAYDEN. 版权所有。</p>
     </footer>
 
     <a href="https://wa.me/60102672767" class="whatsapp-button">
-        <i class="fab fa-whatsapp"></i> Contact Us
+        <i class="fab fa-whatsapp"></i> WhatsApp我们
     </a>
 </body>
 </html>
